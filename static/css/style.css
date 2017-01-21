@@ -1,0 +1,70 @@
+body {
+}
+
+img {
+  width: 100%;
+}
+
+hr {
+  width: 100%;
+  color: #666;
+  background-color: #666;
+}
+
+.movie {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.movie-title {
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+
+.description {
+  margin-bottom: 0;
+}
+
+.votes {
+  margin-bottom: 0;
+}
+
+.genre {
+  color: #777;
+}
+
+.content {
+}
+
+.rating-box {
+  background: url("../img/bkg_rating.png") repeat-x;
+  font-size: 0;
+  height: 13px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 70px;
+}
+
+.rating-box .rating {
+  background: url("../img/bkg_rating.png") repeat-x;
+  background-position: 0 100%;
+  float: left;
+  height: 13px;
+}
+
+.footer {
+  text-align: center;
+  font-size: 1.3em;
+  padding: 60px 0 20px 0;
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 0;
+  }
+  .col-xs-12 {
+    padding: 0 5px 0 5px;
+  }
+}
