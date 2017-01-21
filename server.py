@@ -3,12 +3,10 @@ from parse_afisha import get_movies_info
 import json
 
 from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
 from werkzeug.contrib.cache import SimpleCache
 
 app = Flask(__name__)
 app.config.from_object('config')
-db = SQLAlchemy(app)
 cache = SimpleCache()
 
 
