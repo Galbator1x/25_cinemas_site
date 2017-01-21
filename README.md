@@ -1,7 +1,23 @@
 # Cinemas Site
 
-{TODO. There will be project description}
+[Site](https://new-films.herokuapp.com/) with a list of new movies that are in cinemas.
 
-# Project Goals
+## Installation
+
+```
+pip install -r requirements.txt
+```
+
+## Usage
+
+```
+python manage.py runserver
+```
+
+## Requirements
+
+- Python >= 3.5
+
+## Project Goals
 
 The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
