@@ -1,12 +1,13 @@
 from parse_afisha import get_movies_info
 
 import json
+import os
 
 from flask import Flask, render_template
 from werkzeug.contrib.cache import SimpleCache
 
 app = Flask(__name__)
-app.config.from_object('config')
+app.config.from_object(os.environ['APP_SETTINGS'])
 cache = SimpleCache()
 
 
