@@ -5,8 +5,8 @@
 ## Installation
 
 ```
-$ pip install -r requirements/development.txt
-$ export APP_SETTINGS='config.DevelopmentConfig'
+$ pip install -r requirements.txt
+$ . dev.env
 ```
 
 ## Usage
