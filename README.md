@@ -19,6 +19,10 @@ $ python server.py
 
 - Python >= 3.5
 
+## List of Heroku plugins
+
+- heroku-config
+
 ## Project Goals
 
 The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
