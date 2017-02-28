@@ -1,4 +1,3 @@
-import re
 import json
 
 import requests
@@ -25,8 +24,9 @@ def fetch_movie_info(movie_url):
     image = data_json['image']
     rating = float(data_json.get('aggregateRating', {}).get('ratingValue', 0))
     votes = data_json.get('aggregateRating', {}).get('ratingCount', 0)
-    return {'title': title, 'description': description, 'content': content, 'genre': genre,
-            'image': image, 'rating': rating, 'votes': votes, 'url': movie_url}
+    return {'title': title, 'description': description,
+            'content': content, 'genre': genre, 'image': image,
+            'rating': rating, 'votes': votes, 'url': movie_url}
 
 
 def get_movies_info():

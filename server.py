@@ -1,10 +1,9 @@
-from parse_afisha import get_movies_info
-
 import json
-import os
 
 from flask import Flask, render_template
 from werkzeug.contrib.cache import SimpleCache
+
+from parse_afisha import get_movies_info
 
 app = Flask(__name__)
 app.config.from_object('config')
@@ -34,5 +33,5 @@ def get_movies():
     return json.dumps(get_movies_from_cache(), ensure_ascii=False)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run()
