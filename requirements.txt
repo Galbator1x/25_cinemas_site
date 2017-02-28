@@ -2,3 +2,7 @@ flask==0.12
 requests==2.11.1
 beautifulsoup4==4.5.1
 gunicorn==19.6.0
+flake8==3.3.0
+flake8-builtins==0.2
+flake8-quotes==0.9.0
+isort==4.2.5
