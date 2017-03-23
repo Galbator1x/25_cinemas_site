@@ -9,7 +9,7 @@ def get_movies_urls(movies_count=10):
     afisha_html = requests.get(afisha_url).text
     soup = BeautifulSoup(afisha_html, 'html.parser')
     titles = soup.find_all('h3', class_='usetags')
-    return ['http:{}'.format(title.find('a')['href']) for title in titles][:movies_count]
+    return [title.find('a')['href'] for title in titles][:movies_count]
 
 
 def fetch_movie_info(movie_url):
