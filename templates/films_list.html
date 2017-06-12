@@ -5,7 +5,7 @@
   {% for movie in movies %}
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <div class="movie">
-      <a href="{{ movie.url }}"><img src="{{ movie.image }}" alt="Обложка фильма"></a>
+      <a href="{{ movie.url }}"><img src="{{ movie.image }}" alt="Обложка фильма {{ movie.title }}"></a>
       <a href="{{ movie.url }}"><h3 class="movie-title">{{ movie.title }}</h3></a>
       <p class="description">{{ movie.description }}</p>
       <div class="rating-box">
