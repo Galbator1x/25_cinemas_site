@@ -1,9 +1,8 @@
 import json
 
 from flask import Flask, render_template
+from parse_afisha import fetch_movies_info
 from werkzeug.contrib.cache import SimpleCache
-
-from parse_afisha import get_movies_info
 
 app = Flask(__name__)
 app.config.from_object('config')
@@ -13,7 +12,7 @@ cache = SimpleCache()
 def get_movies_from_cache():
     movies = cache.get('movies')
     if movies is None:
-        movies = get_movies_info()
+        movies = fetch_movies_info()
         cache.set('movies', movies, timeout=12 * 60 * 60)
     return movies
 
