@@ -13,7 +13,7 @@ def make_movies_list():
     movies = cache.get('movies')
     if movies is None:
         movies = fetch_movies_info()
-        cache.set('movies', movies, timeout=app.config['CACHE_MOVIES_TIMEOUT'])
+        cache.set('movies', movies, timeout=int(app.config['CACHE_MOVIES_TIMEOUT']))
     return movies
 
 
