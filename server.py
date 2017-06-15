@@ -9,17 +9,17 @@ app.config.from_object('config')
 cache = SimpleCache()
 
 
-def get_movies_from_cache():
+def make_movies_list():
     movies = cache.get('movies')
     if movies is None:
         movies = fetch_movies_info()
-        cache.set('movies', movies, timeout=12 * 60 * 60)
+        cache.set('movies', movies, timeout=app.config['CACHE_MOVIES_TIMEOUT'])
     return movies
 
 
 @app.route('/')
 def films_list():
-    return render_template('films_list.html', movies=get_movies_from_cache())
+    return render_template('films_list.html', movies=make_movies_list())
 
 
 @app.route('/api/docs')
@@ -29,7 +29,7 @@ def api_docs():
 
 @app.route('/api/movies')
 def get_movies():
-    return json.dumps(get_movies_from_cache(), ensure_ascii=False)
+    return json.dumps(make_movies_list(), ensure_ascii=False)
 
 
 if __name__ == '__main__':
