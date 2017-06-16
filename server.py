@@ -1,8 +1,9 @@
 import json
 
 from flask import Flask, render_template
-from parse_afisha import fetch_movies_info
 from werkzeug.contrib.cache import SimpleCache
+
+from parse_afisha import fetch_movies_info
 
 app = Flask(__name__)
 app.config.from_object('config')

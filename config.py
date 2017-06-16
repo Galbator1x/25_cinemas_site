@@ -3,4 +3,5 @@ import os
 DEBUG = os.getenv('DEBUG', False)
 CSRF_ENABLED = os.getenv('CSRF_ENABLED', True)
 CACHE_MOVIES_TIMEOUT = os.getenv('CACHE_MOVIES_TIMEOUT', 43200)
-THREADS_COUNT = os.getenv('THREADS_COUNT', 4)
+THREADS_COUNT = os.getenv('THREADS_COUNT', 5)
+MIN_CINEMAS_COUNT = os.getenv('MIN_CINEMAS_COUNT', 30)
