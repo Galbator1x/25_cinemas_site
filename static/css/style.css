@@ -5,16 +5,9 @@ img {
   width: 100%;
 }
 
-hr {
-  width: 100%;
-  color: #666;
-  background-color: #666;
-}
+.row {
+  margin-bottom: 100px;
 
-.movie {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
 }
 
 .movie-title {
@@ -66,5 +59,13 @@ hr {
   }
   .col-xs-12 {
     padding: 0 5px 0 5px;
+  }
+}
+
+@media (max-width: 991px) {
+  .movie-info {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
   }
 }
